@@ -21,7 +21,7 @@ def try_download(url, file_path):
         return False
 
 # Lógica principal
-for year in range(2020, 2026):
+for year in range(2019, 2025):
     for week in range(1, 53):
         filename = generate_filename(year, week)
         file_path = os.path.join(download_folder, filename)
@@ -31,7 +31,7 @@ for year in range(2020, 2026):
             print(f"🔁 Ya existe: {filename}, se omite descarga.")
             continue
 
-        base_url = f"https://en.seafood.no/globalassets/markedsinnsikt/apne-rapporter/ukestatistikk/{year}/"
+        base_url = f"https://www.seafood.no/globalassets/markedsinnsikt/apne-rapporter/ukestatistikk/{year}/"
         week_plain = f"uke{week}"
         week_dash = f"uke-{week}"
 
